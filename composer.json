@@ -1,0 +1,52 @@
+{
+
+    "name": "kdubuc/transformer",
+
+    "description": "Fractal Transformer Helper",
+
+    "keywords": ["fractal", "transformer", "api"],
+
+    "homepage": "https://github.com/kdubuc/transformer",
+
+    "license": "CECILL-2.1",
+
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Kevin DUBUC",
+            "email": "kevindubuc62@gmail.com",
+            "homepage": "http://kevindubuc.fr"
+        }
+    ],
+
+    "require": {
+        "php": "^7.1",
+        "league/fractal": "^0.16",
+        "kdubuc/ddd": "dev-master",
+        "pagerfanta/pagerfanta": "^1.0"
+    },
+
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "^8.0",
+        "sami/sami": "^4.0"
+    },
+
+    "autoload": {
+        "psr-4": { "Kdubuc\\Transformer\\": "src/" }
+    },
+
+    "scripts": {
+        "code:tests": "vendor/bin/phpunit tests/",
+        "code:fix-cs": "vendor/bin/php-cs-fixer fix --config=php-cs-fixer.php",
+        "code:generate-docs": "vendor/sami/sami/sami.php update --force sami.php"
+    },
+
+    "config": {
+        "preferred-install": "source",
+        "sort-packages": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
+    }
+
+}
